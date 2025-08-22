@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to $MUSCLE GIRL</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #F8E8E9; /* Light pink background from image */
+        color: #333; /* Dark text for contrast */
+        font-family: "Poppins", sans-serif; /* Applied Poppins font */
+      }
+      .navbar {
+        background-color: #6A86B9; /* Blue from image */
+        border-bottom: 1px solid #555;
+      }
+      .navbar-brand img {
+        height: 40px; /* Adjust as needed for the coin icon */
+      }
+      .nav-link {
+        color: #F8E8E9!important;
+        padding: 0.5rem 1rem; /* Adjust padding for better spacing */
+      }
+      .nav-link:hover {
+        color: #3F5E97!important;
+      }
+      .btn-whitepaper {
+        background-color: #3F5E97; /* Darker blue button */
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .hero-section {
+        padding: 80px 0;
+        background-color: #F8E8E9; /* Light pink background */
+      }
+      .hero-text h1 {
+        font-size: 3.5rem;
+        font-weight: 800; /* Extra bold for headings */
+        margin-bottom: 20px;
+      }
+      .hero-text p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        font-weight: 300; /* Lighter weight for body text */
+      }
+      .btn-presale {
+        background-color: #6A86B9; /* Blue button */
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 5px;
+        font-weight: 700; /* Bold */
+      }
+      .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .hero-image img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Styles for the "Buy Token" section */
+      .buy-token-section {
+        background-color: #F8E8E9; /* Light pink background */
+        padding: 60px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh; /* Ensure it takes some vertical space */
+      }
+      .buy-token-card {
+        background-color: #E9D2AE; /* Light tan/sand color */
+        border-radius: 15px;
+        padding: 40px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative;
+      }
+      .buy-token-card h3 {
+        font-size: 1.5rem;
+        font-weight: 700; /* Bold */
+        margin-bottom: 10px;
+      }
+      .buy-token-card .divider {
+        width: 80%;
+        height: 2px;
+        background-color: #6A86B9; /* Blue divider */
+        margin: 0 auto 20px auto;
+      }
+      .buy-token-card p {
+        margin-bottom: 30px;
+        font-size: 1rem;
+        color: #555;
+        font-weight: 300;
+      }
+      .network-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      .network-logos img {
+        height: 40px; /* Adjust as needed */
+        margin: 0 10px;
+      }
+      .input-group-custom {
+        display: flex;
+        align-items: center;
+        background-color: #F8E8E9; /* Light pink background for the input fields */
+        border-radius: 50px; /* Pill shape */
+        padding: 5px;
+        margin-bottom: 20px;
+        height: 60px; /* Fixed height for consistency */
+        overflow: hidden; /* To keep inner elements within bounds */
+      }
+      .input-group-custom .dropdown-toggle {
+        background-color: #6A86B9; /* Blue background for dropdowns */
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 50px; /* Pill shape for dropdown button */
+        font-weight: 700; /* Bold */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 0.7; /* Adjusted: Make button slightly smaller */
+        flex-shrink: 0;
+        height: 100%; /* Fill parent height */
+      }
+      .input-group-custom .dropdown-toggle img {
+        height: 24px; /* Icon size */
+        margin-right: 8px;
+      }
+      .input-group-custom .dropdown-toggle::after {
+        margin-left: auto; /* Push caret to the right */
+      }
+      .input-group-custom .form-control {
+        background-color: transparent; /* Transparent background for input */
+        color: #333;
+        border: none;
+        text-align: right; /* Align text to the right */
+        padding-right: 15px;
+        font-size: 1.2rem;
+        width: auto; /* Auto width to adjust with content */
+        flex-grow: 1.3; /* Adjusted: Make input field larger */
+        height: 100%; /* Fill parent height */
+        font-weight: 600; /* Semi-bold for input text */
+      }
+      .input-group-custom .form-control:focus {
+        box-shadow: none;
+        outline: none;
+      }
+      .input-group-custom .input-addon {
+        color: #6A86B9; /* Blue color for the small icon/text */
+        font-size: 1.2rem;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+      }
+      .input-group-custom .input-addon img {
+        height: 24px; /* Icon size */
+      }
+      .buy-token-card .dropdown-menu {
+        background-color: #F8E8E9; /* Light pink background for dropdown items */
+        border: none;
+        border-radius: 10px;
+      }
+      .buy-token-card .dropdown-item {
+        color: #333;
+        padding: 10px 20px;
+      }
+      .buy-token-card .dropdown-item:hover {
+        background-color: #6A86B9;
+        color: #fff;
+      }
+      .buy-token-button {
+        background-color: #3F5E97; /* Darker blue button */
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 50px; /* Pill shape */
+        font-weight: 700; /* Bold */
+        font-size: 1.2rem;
+        width: 100%;
+        margin-top: 20px;
+      }
+      .input-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 0 10px; /* Align with input fields */
+        font-size: 0.9rem;
+        color: #555;
+        font-weight: 300;
+      }
+
+      /* Styles for "What is DopeHouse?" section */
+      .what-is-buttcoin-section {
+        /* Renamed for consistency in HTML, but CSS class remains */
+        background-color: #E9D2AE; /* Light tan background */
+        padding: 80px 0;
+        position: relative; /* For background elements */
+        overflow: hidden; /* Hide overflowing background elements */
+      }
+      .what-is-buttcoin-section h2 {
+        font-size: 3rem;
+        font-weight: 800; /* Extra bold */
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .what-is-buttcoin-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        font-weight: 300;
+      }
+      .what-is-buttcoin-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; /* Ensure it takes full height of column */
+      }
+      .what-is-buttcoin-image img {
+        max-width: 100%;
+        height: auto;
+        position: relative; /* To allow z-index for overlaying background */
+        z-index: 2; /* Ensure character is above background */
+      }
+
+      /* Background elements for "What is DopeHouse?" section */
+      .what-is-buttcoin-section::before,
+      .what-is-buttcoin-section::after {
+        content: "";
+        position: absolute;
+        z-index: 1; /* Below content */
+      }
+      .what-is-buttcoin-section::before {
+        /* Left large coin */
+        top: 10%;
+        left: -100px; /* Adjust to move partly off-screen */
+        width: 300px;
+        height: 300px;
+        background: url("https://via.placeholder.com/300x300/6A86B9/fff?text=DOPE+BG")
+          no-repeat center center;
+        background-size: contain;
+        opacity: 0.2;
+        transform: rotate(-30deg); /* Tilt as in image */
+      }
+      .what-is-buttcoin-section::after {
+        /* Right smaller coin */
+        bottom: 5%;
+        right: -50px; /* Adjust to move partly off-screen */
+        width: 150px;
+        height: 150px;
+        background: url("https://via.placeholder.com/150x150/6A86B9/fff?text=DOPE+BG")
+          no-repeat center center;
+        background-size: contain;
+        opacity: 0.2;
+        transform: rotate(45deg); /* Tilt as in image */
+      }
+      .background-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0; /* Below all content and other background elements */
+        background-image: radial-gradient(
+            circle at 70% 30%,
+            rgba(106, 134, 185, 0.2) 1px,
+            transparent 1px
+          ),
+          radial-gradient(
+            circle at 30% 70%,
+            rgba(106, 134, 185, 0.2) 1px,
+            transparent 1px
+          );
+        background-size: 50px 50px; /* Adjust spacing of dots */
+        opacity: 0.5;
+      }
+
+      /* Styles for "Why Choose DopeHouse?" section */
+      .why-choose-buttcoin-section {
+        /* Renamed for consistency in HTML, but CSS class remains */
+        background-color: #F8E8E9; /* Light pink background */
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .why-choose-buttcoin-section h2 {
+        font-size: 3rem;
+        font-weight: 800; /* Extra bold */
+        margin-bottom: 50px;
+        color: #333;
+      }
+      .reason-card {
+        background-color: #E9D2AE; /* Light tan for cards */
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px; /* Space between cards on smaller screens */
+        text-align: center;
+        height: 100%; /* Ensure cards are same height in a row */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Align content to top */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      .reason-card img {
+        max-width: 120px; /* Adjust character image size */
+        height: auto;
+        margin: 0 auto 20px auto; /* Center image and add space below */
+      }
+      .reason-card h4 {
+        font-size: 1.4rem;
+        font-weight: 700; /* Bold */
+        margin-bottom: 15px;
+        color: #6A86B9; /* Blue color for card titles */
+      }
+      .reason-card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+        flex-grow: 1; /* Allows paragraph to take remaining space */
+        font-weight: 300;
+      }
+
+      /* Background elements for "Why Choose DopeHouse?" section */
+      .why-choose-buttcoin-section::before,
+      .why-choose-buttcoin-section::after {
+        content: "";
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.08; /* Very subtle */
+        z-index: 0;
+      }
+      .why-choose-buttcoin-section::before {
+        /* Left coin */
+        top: 10%;
+        left: -150px;
+        width: 250px;
+        height: 250px;
+        background-image: url("https://via.placeholder.com/250x250/6A86B9/fff?text=DOPE+BG");
+        transform: rotate(20deg);
+      }
+      .why-choose-buttcoin-section::after {
+        /* Right coin */
+        bottom: 5%;
+        right: -100px;
+        width: 200px;
+        height: 200px;
+        background-image: url("https://via.placeholder.com/200x200/6A86B9/fff?text=DOPE+BG");
+        transform: rotate(-40deg);
+      }
+      .why-choose-buttcoin-section .background-circles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-image: radial-gradient(
+            circle at 20% 80%,
+            rgba(106, 134, 185, 0.1) 1px,
+            transparent 1px
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(106, 134, 185, 0.1) 1px,
+            transparent 1px
+          );
+        background-size: 100px 100px;
+      }
+
+      /* Styles for "The DopeHouse Blueprints" (Roadmap) Section */
+      .roadmap-section {
+        background-color: #E9D2AE; /* Light tan background */
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .roadmap-section h2 {
+        font-size: 3rem;
+        font-weight: 800; /* Extra bold */
+        margin-bottom: 60px;
+        text-align: center;
+        color: #333;
+      }
+      .roadmap-pipeline {
+        position: relative;
+        width: 80%; /* Adjust width of the pipeline container */
+        margin: 0 auto; /* Center the pipeline */
+        padding-bottom: 50px; /* Space for the bottom part of the pipe */
+      }
+      .pipeline-segment {
+        position: relative;
+        height: 150px; /* Height of each pipe segment area */
+        margin-bottom: 80px; /* Space between segments */
+        display: flex;
+        align-items: center;
+      }
+      .pipeline-segment.left-aligned .roadmap-content {
+        padding-right: 50%; /* Make space for the pipe and image */
+        text-align: right;
+      }
+      .pipeline-segment.right-aligned .roadmap-content {
+        padding-left: 50%; /* Make space for the pipe and image */
+        text-align: left;
+      }
+
+      .pipeline-segment .roadmap-content h4 {
+        font-size: 1.8rem;
+        font-weight: 700; /* Bold */
+        color: #6A86B9; /* Blue color */
+        margin-bottom: 15px;
+      }
+      .pipeline-segment .roadmap-content ul {
+        list-style: none; /* Remove default bullets */
+        padding-left: 0;
+        text-align: inherit; /* Inherit text-align from parent */
+      }
+      .pipeline-segment .roadmap-content ul li {
+        position: relative;
+        margin-bottom: 8px;
+        font-size: 1rem;
+        color: #555;
+        padding-left: 20px; /* Space for custom bullet */
+        font-weight: 300;
+      }
+      .pipeline-segment .roadmap-content ul li::before {
+        content: "\2022"; /* Unicode for a bullet point */
+        color: #6A86B9; /* Blue bullet color */
+        position: absolute;
+        left: 0;
+        font-size: 1.2em;
+        line-height: 1;
+      }
+
+      .pipeline-character {
+        position: absolute;
+        width: 200px; /* Size of the circular character section */
+        height: 200px;
+        background-color: #F8E8E9; /* Background for character circle */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        z-index: 2; /* Above the pipe */
+      }
+      .pipeline-character img {
+        max-width: 120px; /* Size of character inside circle */
+        height: auto;
+      }
+
+      /* Pipe styling and positioning characters */
+      .pipeline-h-pipe {
+        /* Horizontal pipe segment */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 40px; /* Thickness of pipe */
+        background-color: #F8E8E9; /* Pipe color */
+        border-radius: 20px;
+        z-index: 1; /* Below characters */
+      }
+      .pipeline-v-pipe {
+        /* Vertical pipe segment */
+        position: absolute;
+        width: 40px;
+        background-color: #F8E8E9;
+        border-radius: 20px;
+        z-index: 1;
+      }
+
+      /* Blueprint Stage 1: Left */
+      .pipeline-segment:nth-child(1) .pipeline-character {
+        right: -100px; /* Position to the right of text, over pipe */
+      }
+      .pipeline-segment:nth-child(1) .pipeline-h-pipe {
+        left: 0;
+        width: 100%; /* Spans full width initially */
+      }
+      .pipeline-segment:nth-child(1) .roadmap-content {
+        padding-right: 250px; /* Space for character */
+      }
+
+      /* Blueprint Stage 2: Right */
+      .pipeline-segment:nth-child(2) {
+        justify-content: flex-end; /* Align content to the right */
+      }
+      .pipeline-segment:nth-child(2) .pipeline-character {
+        left: -100px;
+      }
+      .pipeline-segment:nth-child(2) .pipeline-h-pipe {
+        right: 0;
+        width: 100%;
+      }
+      .pipeline-segment:nth-child(2) .roadmap-content {
+        padding-left: 250px;
+        text-align: left; /* Ensure text aligns left */
+      }
+
+      /* Blueprint Stage 3: Left */
+      .pipeline-segment:nth-child(3) .pipeline-character {
+        right: -100px;
+      }
+      .pipeline-segment:nth-child(3) .pipeline-h-pipe {
+        left: 0;
+        width: 100%;
+      }
+      .pipeline-segment:nth-child(3) .roadmap-content {
+        padding-right: 250px;
+      }
+
+      /* Blueprint Stage 4: Right */
+      .pipeline-segment:nth-child(4) {
+        justify-content: flex-end;
+      }
+      .pipeline-segment:nth-child(4) .pipeline-character {
+        left: -100px;
+      }
+      .pipeline-segment:nth-child(4) .pipeline-h-pipe {
+        right: 0;
+        width: 100%;
+      }
+      .pipeline-segment:nth-child(4) .roadmap-content {
+        padding-left: 250px;
+        text-align: left;
+      }
+
+      /* Connecting vertical pipes (simplified for this example, usually more complex SVGs) */
+      .pipeline-connector {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px; /* Same width as horizontal pipe */
+        background-color: #F8E8E9;
+        z-index: 1;
+        border-radius: 20px;
+      }
+      /* Vertical connectors between segments */
+      .pipeline-segment:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        bottom: -80px; /* Half of margin-bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 80px; /* Height to connect to next segment */
+        background-color: #F8E8E9;
+        z-index: 0; /* Below characters and horizontal pipes */
+      }
+
+      /* Responsive adjustments for Roadmap */
+      @media (max-width: 991.98px) {
+        .roadmap-pipeline {
+          width: 95%;
+        }
+        .pipeline-segment {
+          flex-direction: column;
+          text-align: center;
+          margin-bottom: 50px;
+          height: auto;
+        }
+        .pipeline-segment .roadmap-content {
+          padding: 0 15px;
+          text-align: center;
+        }
+        .pipeline-character {
+          position: relative;
+          margin-bottom: 20px;
+          left: auto;
+          right: auto;
+          top: auto;
+          transform: none;
+        }
+        .pipeline-h-pipe,
+        .pipeline-v-pipe,
+        .pipeline-segment::after {
+          display: none; /* Hide complex pipe visuals on smaller screens */
+        }
+      }
+
+      /* Styles for Tokenomics Section */
+      .tokenomics-section {
+        background-color: #F8E8E9; /* Light pink background */
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+        text-align: center; /* For the main heading */
+      }
+      .tokenomics-section h2 {
+        font-size: 3rem;
+        font-weight: 800; /* Extra bold */
+        margin-bottom: 50px;
+        color: #333;
+      }
+      .tokenomics-total-supply {
+        font-size: 1.5rem;
+        font-weight: 700; /* Bold */
+        margin-bottom: 40px;
+        color: #6A86B9; /* Blue color */
+      }
+      .tokenomics-item {
+        background-color: #E9D2AE; /* Light tan for each bar */
+        border-radius: 10px;
+        padding: 15px 25px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Space out text and percentage */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        text-align: left;
+      }
+      .tokenomics-item span:first-child {
+        font-size: 1.1rem;
+        font-weight: 600; /* Semi-bold */
+        color: #555;
+      }
+      .tokenomics-item span:last-child {
+        font-size: 1.1rem;
+        font-weight: 700; /* Bold */
+        color: #6A86B9; /* Blue color for percentage */
+      }
+
+      /* Specific colors for each tokenomics bar */
+      .tokenomics-item.lp {
+        background-color: #6A86B9;
+        color: #fff;
+      } /* Blue */
+      .tokenomics-item.lp span:first-child,
+      .tokenomics-item.lp span:last-child {
+        color: #fff;
+      } /* Adjust percentage color for contrast */
+      .tokenomics-item.staking {
+        background-color: #4C6999;
+      } /* Slightly darker blue */
+      .tokenomics-item.marketing {
+        background-color: #3F5E97;
+      } /* Darker blue */
+      .tokenomics-item.dev {
+        background-color: #2F4E7A;
+      } /* Even darker blue */
+      .tokenomics-item.team {
+        background-color: #1F3C5E;
+      } /* Deepest blue */
+      .tokenomics-item.partnerships {
+        background-color: #1A314B;
+      } /* Darker brown */
+      .tokenomics-item.reserves {
+        background-color: #152A3F;
+      } /* Deepest brown */
+
+      /* Pie chart styling */
+      .tokenomics-pie-chart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+      .tokenomics-pie-chart img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%; /* To match the circular shape if the image is square */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Faint gear background pattern (similar to other sections) */
+      .tokenomics-section .background-gears {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0; /* Behind content */
+        background-image: url("https://via.placeholder.com/80x80/6A86B9/fff?text=DOPE+Gear"),
+          /* Smaller gear */
+            url("https://via.placeholder.com/120x120/6A86B9/fff?text=DOPE+Gear"); /* Larger gear */
+        background-repeat: repeat;
+        background-size: 80px 80px, 120px 120px; /* Different sizes for variety */
+        background-position: 10% 10%, 60% 70%; /* Offset positions */
+        opacity: 0.05; /* Very subtle */
+      }
+
+      /* Styles for Team Section */
+      .team-section {
+        background-color: #E9D2AE; /* Light tan background */
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .team-section h2 {
+        font-size: 3rem;
+        font-weight: 800; /* Extra bold */
+        margin-bottom: 50px;
+        color: #333;
+      }
+      .team-member-card {
+        background-color: #F8E8E9; /* Light pink background for cards */
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px; /* Space between cards on smaller screens */
+        height: 100%; /* Ensure cards are same height in a row */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      .team-member-card img {
+        max-width: 150px; /* Adjust character image size */
+        height: auto;
+        margin: 0 auto 25px auto; /* Center image and add space below */
+        border-radius: 50%; /* If images are circular, apply border-radius */
+        border: 3px solid #6A86B9; /* Blue border for images */
+      }
+      .team-member-card h4 {
+        font-size: 1.6rem;
+        font-weight: 700; /* Bold */
+        margin-bottom: 5px;
+        color: #6A86B9; /* Blue for name */
+      }
+      .team-member-card p.title {
+        font-size: 1.1rem;
+        color: #555;
+        margin-bottom: 15px;
+        font-weight: 400; /* Regular */
+      }
+      .team-member-card p.bio {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #333;
+        text-align: left; /* Align bio text to left */
+        flex-grow: 1; /* Allow bio to take up remaining space */
+        font-weight: 300;
+      }
+
+      /* Background elements for Team section */
+      .team-section::before,
+      .team-section::after {
+        content: "";
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0.08; /* Very subtle */
+        z-index: 0;
+      }
+      .team-section::before {
+        /* Left gear */
+        top: 15%;
+        left: -100px;
+        width: 200px;
+        height: 200px;
+        background-image: url("https://via.placeholder.com/200x200/6A86B9/fff?text=DOPE+Gear");
+        transform: rotate(30deg);
+      }
+      .team-section::after {
+        /* Right gear */
+        bottom: 10%;
+        right: -80px;
+        width: 180px;
+        height: 180px;
+        background-image: url("https://via.placeholder.com/180x180/6A86B9/fff?text=DOPE+Gear");
+        transform: rotate(-50deg);
+      }
+
+      /* Styles for FAQ Section */
+      .faq-section {
+        background-color: #F8E8E9; /* Light pink background */
+        padding: 80px 0;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+      .faq-section h2 {
+        font-size: 3rem;
+        font-weight: 800; /* Extra bold */
+        margin-bottom: 50px;
+        color: #333;
+      }
+      .faq-section .accordion {
+        max-width: 900px; /* Limit accordion width for better readability */
+        margin: 0 auto;
+      }
+      .faq-section .accordion-item {
+        background-color: #E9D2AE; /* Light tan for accordion items */
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        overflow: hidden; /* Ensure rounded corners apply */
+      }
+      .faq-section .accordion-button {
+        background-color: #E9D2AE; /* Same as item background */
+        color: #333;
+        font-size: 1.2rem;
+        font-weight: 600; /* Semi-bold */
+        padding: 20px 25px;
+        border: none;
+        box-shadow: none; /* Remove default focus shadow */
+      }
+      .faq-section .accordion-button:not(.collapsed) {
+        background-color: #6A86B9; /* Blue for active header */
+        color: #fff; /* White text for active header */
+      }
+      .faq-section .accordion-button:focus {
+        box-shadow: none;
+        border-color: transparent;
+      }
+      .faq-section .accordion-button::after {
+        filter: none;
+      }
+      .faq-section .accordion-button:not(.collapsed)::after {
+        filter: invert(100%) grayscale(100%); /* Invert caret color for active blue background */
+      }
+      .faq-section .accordion-body {
+        background-color: #F8E8E9; /* Light pink background for content */
+        color: #555;
+        padding: 20px 25px;
+        text-align: left;
+        border-top: 1px solid #ccc;
+        font-weight: 300;
+      }
+      .faq-contact-button {
+        background-color: #3F5E97; /* Darker blue button */
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 50px; /* Pill shape */
+        font-weight: 700; /* Bold */
+        font-size: 1.2rem;
+        margin-top: 40px;
+      }
+
+      /* Background elements for FAQ section (reusing gear pattern from tokenomics or team) */
+      .faq-section .background-gears {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0; /* Behind content */
+        background-image: url("https://via.placeholder.com/80x80/6A86B9/fff?text=DOPE+Gear"),
+          /* Smaller gear */
+            url("https://via.placeholder.com/120x120/6A86B9/fff?text=DOPE+Gear"); /* Larger gear */
+        background-repeat: repeat;
+        background-size: 80px 80px, 120px 120px; /* Different sizes for variety */
+        background-position: 20% 80%, 70% 30%; /* Offset positions */
+        opacity: 0.05; /* Very subtle */
+      }
+
+      /* Floating arrow button */
+      .float-arrow-button {
+        position: fixed; /* or absolute if within a specific container */
+        bottom: 30px;
+        right: 30px;
+        background-color: #3F5E97; /* Darker blue */
+        color: #fff;
+        border: none;
+        border-radius: 50%; /* Make it circular */
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        z-index: 1000; /* Ensure it's on top */
+      }
+
+      /* Footer Section Styles */
+      .footer-section {
+        background-color: #E9D2AE; /* Light tan for footer */
+        padding: 50px 0 20px 0;
+        text-align: center;
+        border-top: 1px solid #ccc;
+        border-radius: 20px 20px 0 0; /* Rounded top corners */
+        margin-top: 50px; /* Space from content above */
+      }
+      .footer-section .footer-character {
+        max-width: 80px; /* Size of footer character */
+        margin-bottom: 20px;
+      }
+      .footer-section h4 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 600; /* Semi-bold */
+      }
+      .footer-section .footer-email {
+        color: #6A86B9; /* Blue for email link */
+        text-decoration: none;
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        display: inline-block; /* To allow margin-bottom */
+        font-weight: 300;
+      }
+      .footer-section .footer-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 30px 0;
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping on small screens */
+        justify-content: center;
+        gap: 20px; /* Space between nav items */
+      }
+      .footer-section .footer-nav ul li a {
+        color: #555;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      .footer-section .footer-nav ul li a:hover {
+        color: #333;
+      }
+      .footer-section .footer-bottom {
+        border-top: 1px solid #ccc;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9rem;
+        color: #555;
+        font-weight: 300;
+      }
+      .footer-section .footer-bottom .copyright {
+        margin-right: auto; /* Push copyright to the left */
+      }
+      .footer-section .footer-bottom .risk-disclaimer {
+        flex-grow: 1;
+        text-align: center;
+        padding: 0 15px;
+      }
+      .footer-section .social-icons {
+        display: flex;
+        gap: 15px;
+        margin-left: auto; /* Push social icons to the right */
+      }
+      .footer-section .social-icon-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #6A86B9; /* Blue border */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #6A86B9; /* Blue icon color */
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      .footer-section .social-icon-circle:hover {
+        background-color: #6A86B9;
+        color: #fff;
+      }
+      @media (max-width: 767.98px) {
+        .footer-section .footer-bottom {
+          flex-direction: column;
+          text-align: center;
+        }
+        .footer-section .footer-bottom .copyright,
+        .footer-section .footer-bottom .risk-disclaimer,
+        .footer-section .social-icons {
+          margin-bottom: 15px;
+          margin-right: 0; /* Reset margins */
+          margin-left: 0; /* Reset margins */
+        }
+      }
+    </style>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="img/1.jpg"
+            alt="$MUSCLE GIRL Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about-section">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blueprint">Blueprints</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tokenomics">Tokenomics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQs</a>
+            </li>
+          </ul>
+          <button class="btn btn-whitepaper"> <a href="white paper.pdf" download class="btn btn-whitepaper"> Whitepaper</a></button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section" data-aos="fade-up" >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 hero-text" data-aos="slide-right">
+            <h1>Welcome to the $MUSCLE GIRL: The Ultimate Flex!</h1>
+            <p>
+              In a world full of weak hands and paper traders, $MUSCLE GIRL was born to flex strength where others fold. She isn’t just a meme, she’s the symbol of power, discipline, and unstoppable gains. Every rep, every flex, every pump is a reminder that this is not just another token…..it’s a movement for those who grind harder, push stronger, and refuse to quit.
+            </p>
+            <button class="btn btn-presale"> Join the Flex! 💪</button>
+          </div>
+          <div class="col-lg-5 hero-image" data-aos="slide-left">
+            <img
+              src="img/1.jpg"
+              alt="$MUSCLE GIRL Mascot Character"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="buy-token-section" data-aos="fade-up">
+      <div class="buy-token-card">
+        <div class="divider"></div>
+        <h3>Your Strength Awaits!</h3>
+        <p>Choose Your Preferred Network to Get Pumped</p>
+
+        <div class="network-logos">
+          <img
+            src="Sol.png"
+            alt="sol Logo"
+          
+          
+          />
+        </div>
+
+        <div class="row gx-3 mb-3">
+          <div class="col-6">
+            <div class="input-group-custom">
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  id="dropdownPayWith"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="Sol.png"
+                    alt="sol Icon"
+                  />
+                  SOL
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownPayWith">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <img
+                        src="Sol.png"
+                        alt="SOL Icon"
+                        class="me-2"
+                      />
+                      SOL</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <img
+                        src="usdt.png"
+                        alt="ETH Icon"
+                        class="me-2"
+                      />
+                      ETH</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <img
+                        src="https://via.placeholder.com/20x20/F3BA2F/333?text=B"
+                        alt="BNB Icon"
+                        class="me-2"
+                      />
+                      BNB</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <img
+                        src="https://via.placeholder.com/20x20/F7931A/fff?text=B"
+                        alt="BTC Icon"
+                        class="me-2"
+                      />
+                      BTC</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                value="2"
+                aria-label="Pay With SOL"
+              />
+              <span class="input-addon">
+                <img
+                  src="https://via.placeholder.com/20x20/888/fff?text=E"
+                  alt="Ethereum Icon"
+                />
+              </span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input-group-custom">
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  id="dropdownReceive"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="usdt.png"
+                    alt="USDT Icon"
+                  />
+                  USDT
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownReceive">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <img
+                        src="https://via.placeholder.com/20x20/00a86b/fff?text=U"
+                        alt="USDT Icon"
+                        class="me-2"
+                      />
+                      USDT</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <img
+                        src="https://via.placeholder.com/20x20/f0c040/333?text=D"
+                        alt="DOPE Icon"
+                        class="me-2"
+                      />
+                      $DOPE</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <img
+                        src="https://via.placeholder.com/20x20/3C91E6/fff?text=U"
+                        alt="USDC Icon"
+                        class="me-2"
+                      />
+                      USDC</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <input
+                type="text"
+                class="form-control"
+                value="0"
+                aria-label="Max Receive $MUSCLE GIRL"
+              />
+              <span class="input-addon">
+                <img
+                  src="https://via.placeholder.com/24x24/6A86B9/fff?text=D"
+                  alt="DOPE Icon"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-labels">
+          <span>Pay With SOL</span>
+          <span>Max Receive $MUSCLE GIRL</span>
+        </div>
+
+        <button class="btn buy-token-button">Flex Now! 💪</button>
+      </div>
+    </section>
+
+    <section class="what-is-buttcoin-section" data-aos="fade-up" id="about-section">
+      <div class="background-pattern"></div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 what-is-buttcoin-image">
+            <img
+              src="img/2.jpg"
+              alt="$MUSCLE GIRL Character"
+            />
+          </div>
+          <div class="col-lg-6">
+            <h2>What is $MUSCLE GIRL?</h2>
+            <p>
+              $MUSCLE GIRL represents strength in the market and strength in the community. She’s here to lift bags, crush FUD, and keep pushing until everyone watching realizes gains aren’t for the lazy, they’re for the strong. Whether you’re here for the memes, the art, or the grind, $MUSCLE GIRL is your proof that this space isn’t just about luck……..it’s about muscle, mindset, and momentum. Join the flex. 💪
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose-buttcoin-section" data-aos="fade-up" id="us">
+      <div class="background-circles"></div>
+      <div class="container">
+        <h2>Why Flex with $MUSCLE GIRL?</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="reason-card" data-aos="fade-up" data-aos-delay="100">
+              <img
+                src="img/5.jpg"
+                alt="Unstoppable Gains Icon"
+              />
+              <h4>Unstoppable Gains & Strength Aesthetic</h4>
+              <p>
+                $MUSCLE GIRL boasts a bold, powerful mascot and a strong, disciplined aesthetic that stands out in the crypto space. We are here to define the aesthetic of strength on the blockchain, creating a brand that is instantly recognizable and full of power.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="reason-card" data-aos="fade-up" data-aos-delay="100">
+              <img
+                src="img/4.jpg"
+                alt="Community Icon"
+              />
+              <h4>Community-Powered Pumps & Growth</h4>
+              <p>
+                Forget weak hands and paper traders. $MUSCLE GIRL thrives on raw strength and community-driven growth. Our community is the heartbeat, driving the pumps and expanding the gains rep by rep. Every member fuels the momentum, making $MUSCLE GIRL unstoppable.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="reason-card" data-aos="fade-up" data-aos-delay="100">
+              <img
+                src="img/3.jpg"
+                alt="Culture Icon"
+              />
+              <h4>Discipline Over Distractions: The Grind Never Stops</h4>
+              <p>
+                We're not here to build boring apps; we’re here to build a movement. Our "blueprints" focus on flexing in the face of FUD, building a strong community, and ensuring long-term momentum. We have no ceiling, just gains to reach.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="tokenomics-section" data-aos="fade-up" id="tokenomics">
+    <div class="background-gears"></div>
+    <div class="container">
+        <h2>$MUSCLE GIRL TOKENOMICS: Your Gains, Our Strength</h2>
+        <p class="tokenomics-total-supply">Total Supply: 1,000,000,000 $MUSCLE GIRL</p>
+        <p class="text-center" style="font-size: 1.2rem; color: #555; margin-bottom: 40px; font-weight: 300;">
+            Ensuring deep trading, fair entry, and unstoppable gains.
+        </p>
+
+        <div class="row align-items-start">
+            <div class="col-lg-6">
+                <h3 style="color: #6A86B9; font-weight: 700; margin-bottom: 25px;">📦 Allocation</h3>
+                <div class="tokenomics-item">
+                    <span>🔁 Liquidity Pool</span> <span>– 60%</span>
+                    <p class="item-description">Locked at launch. Ensures deep trading, fair entry, and stability.</p>
+                </div>
+                <div class="tokenomics-item">
+                    <span>🎁 Community Growth</span> <span>– 20%</span>
+                    <p class="item-description">For airdrops, meme contests, raid rewards, early contributors, and staking if needed.</p>
+                </div>
+                <div class="tokenomics-item">
+                    <span>📢 Marketing & Partnerships</span> <span>– 10%</span>
+                    <p class="item-description">Covers influencer deals, collaborations, listings, promo pushes, and giveaways.</p>
+                </div>
+                <div class="tokenomics-item">
+                    <span>🛠 Team & Dev</span> <span>– 7%</span>
+                    <p class="item-description">Vested monthly over 6–12 months to keep long-term commitment.</p>
+                </div>
+                <div class="tokenomics-item">
+                    <span>🔒 Reserve Vault</span> <span>– 3%</span>
+                    <p class="item-description">Used strategically for future expansion or DAO proposals.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="tokenomics-details mt-lg-0 mt-5">
+                    <h3 style="color: #6A86B9; font-weight: 700; margin-bottom: 25px;">💸 Tax Structure (Buy/Sell)</h3>
+                    <p style="font-size: 1.1rem;"><strong>2% Buy / 2% Sell Tax</strong></p>
+                    <ul>
+                        <li>1% to marketing wallet</li>
+                        <li>1% to community rewards & treasury</li>
+                    </ul>
+                    <p>No hidden fees. No weak hands. Just clean token flow.</p>
+
+                    <h3 class="mt-4" style="color: #6A86B9; font-weight: 700; margin-bottom: 25px;">🔐 Liquidity & Safety</h3>
+                    <ul>
+                        <li>Liquidity will be locked at launch</li>
+                        <li>Contract will be renounced (optional, depending on dev decision)</li>
+                        <li>No private sale. No presale. Everyone enters from the front.</li>
+                    </ul>
+
+                    <h3 class="mt-4" style="color: #6A86B9; font-weight: 700; margin-bottom: 25px;">🧠 Why It Works</h3>
+                    <ul>
+                        <li>Simple, meme-ready structure</li>
+                        <li>Protects against whales and early dumps</li>
+                        <li>Fuels community without VC handouts</li>
+                        <li>Supports long-term growth with flexibility.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 tokenomics-pie-chart">
+                <div class="pie-chart-container">
+                    <img src="tokenomics.png" alt="$MUSCLE GIRL Tokenomics Pie Chart">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   
+
+    <section class="faq-section" data-aos="fade-up" id="faq">
+      <div class="background-gears"></div>
+      <div class="container">
+        <h2>FLEX YOUR KNOWLEDGE: FAQs</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                What is $MUSCLE GIRL?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                $MUSCLE GIRL is a powerful meme coin, born to flex strength where others fold. She is a symbol of discipline, strength, and unstoppable gains. It's a movement for those who grind harder and refuse to quit.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                What is the $MUSCLE GIRL Presale all about?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                The $MUSCLE GIRL Presale is your exclusive opportunity to join the movement early! It allows initial members to acquire $MUSCLE GIRL tokens before the general launch, often at a favorable rate, using common cryptocurrencies.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Is $MUSCLE GIRL just another Meme Coin?
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                $MUSCLE GIRL is a memecoin, but one built on a foundation of strength. It stands out with a unique identity, a powerful mascot, and a strong focus on building a cultural movement rather than just basic utility. It's the grind that sets us apart.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                Are the $MUSCLE GIRL Blueprints secure?
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Absolutely. We take security seriously. Our blueprints include a commitment to third-party smart contract audits to ensure trust and reliability. Our Lead Architect oversees all technical developments, ensuring a robust and secure foundation for the $MUSCLE GIRL ecosystem.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                Do I Need a Crypto Wallet to get my $MUSCLE GIRL?
+              </button>
+            </h2>
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                To truly join the $MUSCLE GIRL movement and acquire your tokens, you will need a crypto wallet compatible with the networks we operate on (e.g., Polygon). This is essential for participating in the presale and receiving your tokens securely.
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="btn faq-contact-button">
+          <a href="https://t.me/+IDW7FZ_Bkvc4OTQ5" style="color: white;">Still have questions? !</a>
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer-section" data-aos="fade-up">
+      <div class="container">
+        <img
+          src="img/6.jpg"
+          alt="$MUSCLE GIRL Footer Mascot"
+          class="footer-character"
+        />
+        <h4>Got Questions? Ready to Flex?</h4>
+        <a href="mailto:info@musclegirl.xyz" class="footer-email"
+          >info@musclegirl.xyz</a
+        >
+        <p class="contact-address">
+          <strong>Contract Address:</strong> HabnzzKDSxuKfEqN67n5JYqHdJWgQEtKJ1yFGsGRmoon
+        </p>
+
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#about-section">About</a></li>
+            <li><a href="#us">Why $MUSCLE GIRL</a></li>
+            <li><a href="#blueprint">Blueprints</a></li>
+            <li><a href="#tokenomics">Tokenomics</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-bottom">
+          <span class="copyright">© 2025 $MUSCLE GIRL. All rights reserved.</span>
+          <span class="risk-disclaimer"
+            >Meme investments carry risk. Please lift responsibly.</span
+          >
+          <div class="social-icons">
+            <a href="https://discord.gg/vAsyc5JF" class="social-icon-circle"
+              ><i class="fab fa-discord"></i
+            ></a>
+            <a href="https://x.com/ewald1036245108?s=21" class="social-icon-circle"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            
+            <a href="https://t.me/+IDW7FZ_Bkvc4OTQ5" class="social-icon-circle"
+              ><i class="fab fa-telegram-plane"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      class="float-arrow-button"
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+    >
+      &#8593;
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+</body>
+</html>
